@@ -1,4 +1,3 @@
-
 const express = require("express");
 require("./models/config"); // MongoDB connection
 const cors = require("cors");

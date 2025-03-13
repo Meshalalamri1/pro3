@@ -1,7 +1,8 @@
+
 const mongoose = require('mongoose');
 
-// MongoDB connection string
-const MONGODB_URI = 'mongodb+srv://meshal:Meshal2009@cluster0.ebduv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+// استخدام رابط MongoDB من متغيرات البيئة أو استخدام الرابط المباشر كاحتياطي
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://meshal:Meshal2009@cluster0.ebduv.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(MONGODB_URI)
   .then(() => {
