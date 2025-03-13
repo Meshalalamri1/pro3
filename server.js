@@ -1,11 +1,12 @@
 const express = require("express");
+require('dotenv').config(); // تحميل المتغيرات البيئية
 require("./models/config"); // MongoDB connection
 const cors = require("cors");
 
 const authRoutes = require("./models/routes/authRoutes");
 const hotelRoutes = require("./models/routes/hotelRoutes");
 const eventRoutes = require("./models/routes/eventRoutes");
-const bookingRoutes = require("./bookingRoutes");
+const bookingRoutes = require("./models/routes/bookingRoutes");
 
 const app = express();
 
